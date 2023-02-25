@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black-with-75-opacity-for-lightbox-background: hsl(0, 0%, 0%);
+}
+
 body {
   font-family: 'Kumbh Sans', sans-serif;
 }
@@ -20,8 +31,46 @@ ul {
   list-style: none;
 }
 
+ul li {
+  margin-left: 1rem;
+}
+
 img {
   max-width: 100%;
+  border-radius: 1rem;
+}
+
+span {
+  display: inline-block;
+  color: var(--Orange);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 1rem 0 2rem;
+}
+
+p {
+  margin: 2rem 0;
+}
+
+.btn {
+  border: none;
+  background-color: var(--Orange);
+  color: var(--White);
+  padding: 0.5rem 3rem;
+  border-radius: 0.4rem;
+  font-size: small;
+}
+
+.gray {
+  border: none;
+  background-color: var(--Grayish-blue);
+  color: var(--White);
+  padding: 0.5rem 3rem;
+  border-radius: 0.4rem;
+  justify-content: space-between;
 }
 
 .flex {
@@ -35,19 +84,76 @@ img {
 
 .header .container {
   padding: 1rem 0;
-  display: inline-flex;
-  align-items: center;
   justify-content: space-between;
   flex: 1;
-  border-bottom: 2px solid black;
-  max-width: 1100px;
+  /* border: 2px solid black; */
+  width: 90%;
+  margin: 0 auto;
 }
 
-ul li {
-  margin-left: 1rem;
+.login {
+  justify-content: flex-end;
 }
 
 .login img + img {
   max-width: 30%;
   margin-left: 1rem;
+}
+
+.main .container {
+  width: 90%;
+  margin: 0 auto;
+  /* background-color: gray; */
+  justify-content: space-around;
+  border-top: 1px solid var(--Very-dark-blue);
+  padding: 1rem 2rem 0;
+}
+
+.images {
+  width: 40%;
+}
+
+.text {
+  width: 40%;
+  position: relative;
+}
+
+.other-images {
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.other-images img {
+  width: 20%;
+}
+
+.price span:nth-child(1) {
+  color: var(--Very-dark-blue);
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.price span:nth-child(2) {
+  background-color: var(--Light-grayish-blue);
+  font-size: small;
+  padding: 0.2rem;
+}
+
+.price p {
+  margin: 0.4rem 0 0;
+  font-size: 1.2rem;
+  color: var(--Grayish-blue);
+  position: relative;
+  display: inline-flex;
+}
+
+.price p::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Grayish-blue);
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  height: 3px;
 }

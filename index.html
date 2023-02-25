@@ -25,8 +25,8 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <header class="header flex">
-      <div class="container">
+    <header class="header">
+      <div class="container flex">
         <ul class="flex">
           <div class="logo">sneakers</div>
           <li><a href="#">Collections</a></li>
@@ -45,33 +45,51 @@
     <section class="main">
       <div class="container flex">
         <div class="images">
-          <img
-            src="images/image-product-1.jpg"
-            alt="brown and white sneakers"
-          />
+          <div class="main-image">
+            <img
+              src="images/image-product-1.jpg"
+              alt="brown and white sneakers"
+            />
+          </div>
+          <div class="other-images flex">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" />
+            <img src="images/image-product-2-thumbnail.jpg" alt="" />
+            <img src="images/image-product-3-thumbnail.jpg" alt="" />
+            <img src="images/image-product-4-thumbnail.jpg" alt="" />
+          </div>
         </div>
         <div class="text">
           <span>Sneaker Company</span>
-          <h1>Fall Limited Edition Sneakers</h1>
+          <h1>
+            Fall Limited Edition <br />
+            Sneakers
+          </h1>
           <p>
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          <div class="price">$125.00 50% $250.00</div>
-          <div class="cart">
-            0
-            <button>Add to cart</button>
+          <div class="price">
+            <div><span>$125.00</span> <span>50% </span></div>
+            <p>$250.00</p>
+          </div>
+          <div class="cart flex">
+            <div class="btn gray flex">
+              <img src="images/icon-minus.svg" alt="" />
+              0
+              <img src="images/icon-plus.svg" alt="" />
+            </div>
+            <div class="btn colored">Add to cart</div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
 </html>
