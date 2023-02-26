@@ -35,6 +35,11 @@ ul li {
   margin-left: 1rem;
 }
 
+ul li a:hover {
+  color: var(--Orange);
+  border-bottom: 1px solid var(--Dark-grayish-blue);
+}
+
 img {
   max-width: 100%;
   border-radius: 1rem;
@@ -51,7 +56,13 @@ h1 {
   margin: 1rem 0 2rem;
 }
 
-p {
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-right: 3rem;
+}
+
+.text p:first-child {
   margin: 2rem 0;
 }
 
@@ -65,12 +76,14 @@ p {
 }
 
 .gray {
-  border: none;
   background-color: var(--Grayish-blue);
+  padding-inline: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.gray span {
   color: var(--White);
-  padding: 0.5rem 3rem;
-  border-radius: 0.4rem;
-  justify-content: space-between;
+  margin-inline: 2rem;
 }
 
 .flex {
@@ -86,7 +99,7 @@ p {
   padding: 1rem 0;
   justify-content: space-between;
   flex: 1;
-  /* border: 2px solid black; */
+
   width: 90%;
   margin: 0 auto;
 }
@@ -103,7 +116,6 @@ p {
 .main .container {
   width: 90%;
   margin: 0 auto;
-  /* background-color: gray; */
   justify-content: space-around;
   border-top: 1px solid var(--Very-dark-blue);
   padding: 1rem 2rem 0;
@@ -121,10 +133,17 @@ p {
 .other-images {
   margin-top: 1rem;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
-.other-images img {
+.other-images div {
   width: 20%;
+  border-radius: 1rem;
+}
+
+.other-images div:hover {
+  border: 2px solid var(--Orange);
+  opacity: 0.6;
 }
 
 .price span:nth-child(1) {
@@ -156,4 +175,12 @@ p {
   top: 50%;
   bottom: 0;
   height: 3px;
+}
+
+.colored {
+  box-shadow: 0px 9px 14px 0px rgba(250, 11, 3, 0.6);
+}
+
+.colored p {
+  margin-left: 0.5rem;
 }
