@@ -35,6 +35,10 @@ ul li {
   margin-left: 1rem;
 }
 
+ul li a {
+  color: var(--Dark-grayish-blue);
+}
+
 ul li a:hover {
   color: var(--Orange);
   border-bottom: 1px solid var(--Dark-grayish-blue);
@@ -183,4 +187,12 @@ h1 {
 
 .colored p {
   margin-left: 0.5rem;
+}
+
+/* LIGHTBOX */
+.addToCart,
+.add,
+.minus,
+.mini-img {
+  cursor: pointer;
 }
