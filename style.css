@@ -136,17 +136,15 @@ h1 {
 
 .other-images {
   margin-top: 1rem;
-  justify-content: space-between;
-  align-items: flex-end;
+  gap: 1rem;
 }
 
-.other-images div {
-  width: 20%;
-  border-radius: 1rem;
+.other-images img {
+  border-radius: 0.5rem;
 }
 
-.other-images div:hover {
-  border: 2px solid var(--Orange);
+.other-images img:hover {
+  border: 3px solid var(--Orange);
   opacity: 0.6;
 }
 
@@ -195,4 +193,24 @@ h1 {
 .minus,
 .mini-img {
   cursor: pointer;
+}
+
+/* chocolate.js */
+.chocolat-wrapper .chocolat-bottom {
+  display: none;
+}
+
+.chocolat-wrapper .chocolat-right {
+  background: url(http://chocolat.insipi.de/images/right.png) 50% 50% no-repeat;
+}
+
+.chocolat-wrapper .chocolat-left {
+  background: url(http://chocolat.insipi.de/images/left.png) 50% 50% no-repeat;
+}
+.chocolat-wrapper .chocolat-close {
+  background: url(http://chocolat.insipi.de/images/close.png) 50% 50% no-repeat;
+}
+
+.chocolat-overlay.chocolat-visible {
+  background-color: var(--Black-with-75-opacity-for-lightbox-background);
 }
