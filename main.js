@@ -34,6 +34,3 @@ function minusOne() {
 }
 
 // CHOCOLAT
-document.addEventListener('DOMContentLoaded', function (event) {
-  Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'))
-})
