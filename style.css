@@ -57,7 +57,12 @@ span {
 }
 
 h1 {
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 0;
+}
+
+h1 + p {
+  margin: 2rem 0 1rem;
+  line-height: 1.5;
 }
 
 .logo {
@@ -104,12 +109,9 @@ h1 {
   justify-content: space-between;
   flex: 1;
 
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
-}
-
-.login {
-  justify-content: flex-end;
+  border-bottom: 1px solid var(--Very-dark-blue);
 }
 
 .login img + img {
@@ -118,15 +120,15 @@ h1 {
 }
 
 .main .container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
-  justify-content: space-around;
-  border-top: 1px solid var(--Very-dark-blue);
+  justify-content: space-evenly;
   padding: 1rem 2rem 0;
 }
 
 .images {
-  width: 40%;
+  width: 30%;
+  margin-top: 5rem;
 }
 
 .text {
@@ -195,22 +197,63 @@ h1 {
   cursor: pointer;
 }
 
+.login > img {
+  width: 30%;
+  margin-left: 2rem;
+}
+
+.login > img:hover {
+  border: 2px solid var(--Orange);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.login a {
+  display: inline-block;
+}
+
 /* chocolate.js */
 .chocolat-wrapper .chocolat-bottom {
   display: none;
 }
 
-.chocolat-wrapper .chocolat-right {
-  background: url(http://chocolat.insipi.de/images/right.png) 50% 50% no-repeat;
-}
-
-.chocolat-wrapper .chocolat-left {
-  background: url(http://chocolat.insipi.de/images/left.png) 50% 50% no-repeat;
-}
-.chocolat-wrapper .chocolat-close {
-  background: url(http://chocolat.insipi.de/images/close.png) 50% 50% no-repeat;
-}
-
 .chocolat-overlay.chocolat-visible {
   background-color: var(--Black-with-75-opacity-for-lightbox-background);
+}
+
+@media (min-width: 500px) {
+  .chocolat-image-wrapper .chocolat-img {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .header ul,
+  .header .login > img {
+    display: none;
+  }
+
+  .main .container {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 0 3rem;
+  }
+
+  .images {
+    margin-top: 1rem;
+  }
+
+  .images,
+  .text {
+    width: 100%;
+  }
+
+  .addToCart {
+    font-size: x-small;
+  }
 }
