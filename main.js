@@ -5,6 +5,7 @@ const minus = document.querySelector('.minus')
 const add = document.querySelector('.add')
 const addCart = document.querySelector('.addToCart')
 let sum = document.querySelector('.sum')
+let activeCart = document.querySelector('.cart span')
 
 // EVENT LISTENERS
 minus.addEventListener('click', minusOne)
@@ -19,17 +20,24 @@ addCart.addEventListener('click', addToCart)
 
 function addToCart() {
   sum.innerHTML++
+
+  activeCart.innerHTML = sum.innerHTML
+  activeCart.style.opacity = '1'
+  // activeCart.style.color = 'blue'
 }
 
 function addOne() {
+  activeCart.innerHTML = sum.innerHTML
   sum.innerHTML++
 }
 
 function minusOne() {
   sum.innerHTML--
+  activeCart.innerHTML = sum.innerHTML
 
   if (sum.innerHTML < 0) {
     sum.innerHTML = 0
+    activeCart.innerHTML = sum.innerHTML
   }
 }
 
