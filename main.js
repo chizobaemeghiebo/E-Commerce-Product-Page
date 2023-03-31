@@ -1,6 +1,6 @@
 // const images = document.querySelectorAll('.mini-img')
-// const mainImg = document.querySelector('.main-img')
-// const mainImage = document.querySelectorAll('.main-image')
+const mainImage = document.querySelector('.main-img')
+const randDiv = document.querySelectorAll('#chocolat-content-0')
 const minus = document.querySelector('.minus')
 const add = document.querySelector('.add')
 const addCart = document.querySelector('.addToCart')
@@ -11,6 +11,10 @@ let activeCart = document.querySelector('.cart span')
 minus.addEventListener('click', minusOne)
 add.addEventListener('click', addOne)
 addCart.addEventListener('click', addToCart)
+mainImage.addEventListener('click', () => {
+  // mainImage.classList.add('chocolat-wrapper', 'chocolat-visible')
+  randDiv.classList.add('chocolat-wrapper', 'chocolat-visible')
+})
 
 // images.forEach((img) => {
 //   img.addEventListener('click', () => {
@@ -20,24 +24,27 @@ addCart.addEventListener('click', addToCart)
 
 function addToCart() {
   sum.innerHTML++
-
   activeCart.innerHTML = sum.innerHTML
   activeCart.style.opacity = '1'
   // activeCart.style.color = 'blue'
 }
 
 function addOne() {
-  activeCart.innerHTML = sum.innerHTML
   sum.innerHTML++
+  activeCart.innerHTML = sum.innerHTML
+  activeCart.style.opacity = '1'
 }
 
 function minusOne() {
   sum.innerHTML--
   activeCart.innerHTML = sum.innerHTML
+  activeCart.style.opacity = '1'
 
   if (sum.innerHTML < 0) {
-    sum.innerHTML = 0
     activeCart.innerHTML = sum.innerHTML
+    activeCart.style.opacity = '1'
+
+    sum.innerHTML = 0
   }
 }
 
